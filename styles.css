@@ -55,12 +55,23 @@ header {
   transition: opacity 1s ease;
 }
 
-nav {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+    gap: 1rem 2rem;
+    row-gap: 1rem;
+  }
+
+  nav a {
+    flex: 1 1 calc(50% - 2rem); /* 2 por fila */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    flex: 1 1 calc(100% / 2 - 1rem); /* 2 por fila en pantallas chicas */
+  }
 }
 
 nav a {
@@ -193,6 +204,11 @@ footer {
 #certificados button:hover {
   background-color: #007f83;
   transform: scale(1.05);
+}
+
+#certificados button.pequeno {
+  font-size: 0.85rem;
+  padding: 0.5rem 1.2rem;
 }
 
 .cert-img {

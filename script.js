@@ -10,10 +10,10 @@ window.addEventListener("scroll", () => {
   // Eleva el botón si está cerca del footer
   const footer = document.querySelector("footer").getBoundingClientRect();
   if (footer.top < window.innerHeight) {
-    scrollBtn.style.bottom = "70px";
-  } else {
-    scrollBtn.style.bottom = "20px";
-  }
+  scrollBtn.style.bottom = "120px"; // Antes 70px
+} else {
+  scrollBtn.style.bottom = "30px";  // Antes 20px
+}
 });
 
 function scrollToTop() {
