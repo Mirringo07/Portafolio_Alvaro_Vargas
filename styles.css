@@ -99,9 +99,9 @@ nav a:hover {
 }
 
 nav a:not(:first-child) {
-  border-left: 1px solid #ccc; /* Línea vertical */
-  padding-left: 1rem; /* Espacio después de la línea */
-  margin-left: 1rem;  /* Espacio antes de la línea */
+  border-left: 1px solid #ccc;
+  padding-left: 1rem; 
+  margin-left: 1rem; 
 }
 
 main {
