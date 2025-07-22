@@ -57,20 +57,23 @@ header {
 
 @media (max-width: 768px) {
   nav {
-    justify-content: center;
-    gap: 1rem 2rem;
-    row-gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   nav a {
-    flex: 1 1 calc(50% - 2rem); /* 2 por fila */
-    text-align: center;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
+  nav {
+    gap: 0.8rem;
+  }
+
   nav a {
-    flex: 1 1 calc(100% / 2 - 1rem); /* 2 por fila en pantallas chicas */
+    font-size: 1rem;
   }
 }
 
@@ -82,9 +85,23 @@ nav a {
   transition: color 0.3s ease;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Espaciado entre enlaces */
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
 nav a:hover {
   color: #ffffff;
   text-shadow: 0 0 5px #00adb5;
+}
+
+nav a:not(:first-child) {
+  border-left: 1px solid #ccc; /* Línea vertical */
+  padding-left: 1rem; /* Espacio después de la línea */
+  margin-left: 1rem;  /* Espacio antes de la línea */
 }
 
 main {
