@@ -66,4 +66,3 @@ function toggleCert(id) {
     img.classList.add("visible");
   }
 }
-
